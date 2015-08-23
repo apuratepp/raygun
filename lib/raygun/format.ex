@@ -76,6 +76,8 @@ defmodule Raygun.Format do
     else
       if Application.get_env(:raygun, :system_user) do
         %{user: Application.get_env(:raygun, :system_user)}
+      else
+        %{}
       end
     end
   end
